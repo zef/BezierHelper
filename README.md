@@ -9,5 +9,6 @@ A Swift library that makes it easy to create (and modify) bezier paths from raw 
 
 # TODO
 
+- [ ] Add documentation about usage in README
 - [ ] Make sure it works when included as a framework
 - [ ] Might add a mechanism to set an absolute start point. Would set the shift based on the original anchor point.
