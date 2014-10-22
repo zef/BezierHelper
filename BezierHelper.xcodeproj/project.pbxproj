@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8D319ED619F746C600E9A04F /* BezierHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D319ED519F746C600E9A04F /* BezierHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D319EE019F746C600E9A04F /* BezierHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D319EDF19F746C600E9A04F /* BezierHelperTests.swift */; };
+		8D319EEA19F7477500E9A04F /* BezierHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D319EE919F7477500E9A04F /* BezierHelper.swift */; };
+		8D319EEB19F7477500E9A04F /* BezierHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D319EE919F7477500E9A04F /* BezierHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,7 @@
 		8D319EDB19F746C600E9A04F /* BezierHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BezierHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D319EDE19F746C600E9A04F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D319EDF19F746C600E9A04F /* BezierHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierHelperTests.swift; sourceTree = "<group>"; };
+		8D319EE919F7477500E9A04F /* BezierHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 		8D319ED219F746C600E9A04F /* BezierHelper */ = {
 			isa = PBXGroup;
 			children = (
+				8D319EE919F7477500E9A04F /* BezierHelper.swift */,
 				8D319ED519F746C600E9A04F /* BezierHelper.h */,
 				8D319ED319F746C600E9A04F /* Supporting Files */,
 			);
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D319EEA19F7477500E9A04F /* BezierHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D319EEB19F7477500E9A04F /* BezierHelper.swift in Sources */,
 				8D319EE019F746C600E9A04F /* BezierHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +304,7 @@
 		8D319EE419F746C600E9A04F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -307,12 +314,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8D319EE519F746C600E9A04F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
