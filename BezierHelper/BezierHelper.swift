@@ -7,11 +7,11 @@
 
 import UIKit
 
-class BezierHelper {
-    typealias BezierPoint = (controlPoint1: CGPoint, controlPoint2: CGPoint, anchor: CGPoint)
-    typealias BezierData = (origin: CGPoint, points: [BezierPoint])
+public class BezierHelper {
+    public typealias BezierPoint = (controlPoint1: CGPoint, controlPoint2: CGPoint, anchor: CGPoint)
+    public typealias BezierData = (origin: CGPoint, points: [BezierPoint])
 
-    class func bezierDataFromArray(array: [Int], shift: CGPoint = CGPointZero) -> BezierData {
+    public class func bezierDataFromArray(array: [Int], shift: CGPoint = CGPointZero) -> BezierData {
         var points = [BezierPoint]()
 
         if array.count % 6 != 2 {
@@ -35,7 +35,7 @@ class BezierHelper {
         return (origin, points)
     }
 
-    class func bezierPathFromData(data: BezierData) -> UIBezierPath {
+    public class func bezierPathFromData(data: BezierData) -> UIBezierPath {
         let path = UIBezierPath()
         path.moveToPoint(data.origin)
         for point in data.points {
@@ -44,7 +44,7 @@ class BezierHelper {
         return path
     }
 
-    class func bezierPathFromArray(array: [Int], shift: CGPoint = CGPointZero) -> UIBezierPath {
+    public class func bezierPathFromArray(array: [Int], shift: CGPoint = CGPointZero) -> UIBezierPath {
         return bezierPathFromData(bezierDataFromArray(array, shift: shift))
     }
     
