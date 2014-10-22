@@ -1,6 +1,6 @@
 # BezierHelper
 
-A Swift library that makes it easy to create (and modify) bezier paths from raw arrays of points.
+A Swift library that makes it easy to create (and modify) bezier paths from raw arrays of coordinates.
 
 # Features
 
