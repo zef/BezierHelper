@@ -54,4 +54,12 @@ class BezierHelperTests: XCTestCase {
         let path = BezierHelper.bezierPathFromArray(points)
         XCTAssert(path.isKindOfClass(UIBezierPath), "Should get a path back")
     }
+
+    func testBadData() {
+        let points = [0, 1, 2, 3]
+        let data = BezierHelper.bezierDataFromArray(points)
+
+        XCTAssertEqual(data.origin, CGPointZero, "Anchor point should be set to zero")
+        XCTAssertEqual(data.points.count, 0, "Data should not contain points")
+    }
 }
