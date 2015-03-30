@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import BezierHelper
 import XCTest
 
 class BezierHelperTests: XCTestCase {
